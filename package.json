@@ -10,6 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fs": "0.0.1-security",
     "inquirer": "^8.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenVC-P/team_generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StevenVC-P/team_generator/issues"
+  },
+  "homepage": "https://github.com/StevenVC-P/team_generator#readme"
 }

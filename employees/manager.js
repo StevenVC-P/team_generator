@@ -2,18 +2,29 @@ const inquirer = require ('inquirer');
 const Employee = require('./employee');
 
 class Manager extends Employee {
-  constructor(name, employeeId, email, number) {
+  constructor(name, employeeId, email, phone) {
     super(name, employeeId, email);
 
-    this.number = number
-    this.managerCard = () => {
-        console.log(`Name: ${this.name} Id: ${this.employeeId} E-mail: ${this.email} Phone: ${this.number}`)
+    this.phone = phone
+    this.managerConsole = () => {
+        console.log(`Name: ${this.name} Id: ${this.employeeId} E-mail: ${this.email} Phone: ${this.phone}`)}
+    this.managercard = () => {
+      `
+      <card>
+        <h3>${this.name}</h3>
+        <p>${this.employeeId}</p>
+        <p>${this.email}</p>
+        <p>${this.phone}</p>
+      </card>
+      `
     }
   }
 }
 
 // TODO: Create a new object using the 'Developer' constructor
-const managerGeneration = [
+
+const managerGeneration = () => {
+  return inquirer.prompt([
     {
     type: 'input',
     message: "What is the manager's name?",
@@ -42,10 +53,16 @@ const managerGeneration = [
     //     engineer
     //     no thank you
     // }
-]
-inquirer.prompt(managerGeneration)
-    .then ((response) => {
-        const boss = new Manager(response.name, response.id, response.email, response.phone)
-        boss.managerCard();
+  ]);
+};
 
-    });
+
+module.exports = {
+  managerGeneration
+};
+// inquirer.prompt(managerGeneration)
+//     .then ((response) => {
+//         const boss = new Manager(response.name, response.id, response.email, response.phone)
+//         boss.managerCard();
+
+//     });
