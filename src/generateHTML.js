@@ -24,7 +24,7 @@ const createHTML = () =>
 
 const createManager = (data) =>
 `
-                <card class = "card m-2 col-3">
+                <div class = "card m-2 col-3">
                     <div class= "card-body">
                         <h3 class="card-title">${data.name}</h3>
                         <h5><i class="fas fa-mug-hot"></i> Manager</h5>
@@ -36,12 +36,12 @@ const createManager = (data) =>
                             <li class="list-group-item">Phone: ${data.phone}</li>
                         </ul>
                     <p>
-                </card>
+                </div>
 `
 
 const createEngineer =(data) =>
 `
-                <card class = "card m-2 col-3">
+                <div class = "card m-2 col-3">
                     <div class= "card-body">
                         <h3 class="card-title">${data.name}</h3>
                         <h5><i class="fas fa-glasses"></i> Engineer</h5>
@@ -53,12 +53,12 @@ const createEngineer =(data) =>
                             <li class="list-group-item">GitHub: [${data.github}](https://www.github/${data.github})</li>
                         </ul>
                     </p>
-                </card>
+                </div>
 `
 
 const createIntern =(data) => 
 `
-                <card class = "card m-2 col-3">
+                <div class = "card m-2 col-3">
                     <div class= "card-body">
                         <h3 class="card-title">${data.name}</h3>
                         <h5><i class="fas fa-user-graduate"></i> Intern</h5>
@@ -70,7 +70,7 @@ const createIntern =(data) =>
                             <li class="list-group-item">School: ${data.school}</li>
                         </ul>
                     </p>
-                </card>
+                </div>
 `
 
 const endHTML = () =>

@@ -1,11 +1,11 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('./utils/generateHTML.js');
-const Manager = require('./employees/manager.js');
-const Engineer = require('./employees/engineer.js');
-const Intern = require('./employees/intern.js');
+const generateHTML = require('./src/generateHTML.js');
+const Manager = require('./lib/manager.js');
+const Engineer = require('./lib/engineer.js');
+const Intern = require('./lib/intern.js');
 
-const html = './index_output/index.html'
+const html = './dist/index.html'
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
