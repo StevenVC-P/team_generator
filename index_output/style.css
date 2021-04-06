@@ -1,0 +1,22 @@
+header{
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.card{
+    border-radius: 15px;
+    box-shadow: 5px 5px 50px 10px black;
+
+}
+
+.card-body{
+ background-color: blue;
+ color: white;
+ border-radius: 15px;
+}
+
+.card-title{
+    margin: 3px;
+}

@@ -121,7 +121,7 @@ const nextEmployee =() => {
         }else if (role === "Intern"){
             internResponse();
         }else if (role === "Finished"){
-            appendEnd('./index_output/index.html', generateHTML.endHTML())
+            appendEnd(html, generateHTML.endHTML())
         };
     })
 }
@@ -130,7 +130,7 @@ function managerResponse(){
     inquirer.prompt(managerQuestions)
         .then ((response) =>{
         const boss = new Manager(response.name, response.id, response.email, response.phone)  
-        writeManager('./index_output/index.html', generateHTML.createManager(boss))
+        writeManager(html, generateHTML.createManager(boss))
         console.log(boss)
         nextEmployee();
         })
@@ -140,7 +140,7 @@ function engineerResponse(){
     inquirer.prompt(engineerQuestions)
         .then ((response) =>{
         const senior = new Engineer(response.name, response.id, response.email, response.github)  
-        writeEngineer('./index_output/index.html', generateHTML.createEngineer(senior))
+        writeEngineer(html, generateHTML.createEngineer(senior))
         nextEmployee();
     })
 }
@@ -148,8 +148,8 @@ function engineerResponse(){
 function internResponse(){
     inquirer.prompt(internQuestions)
         .then ((response) =>{
-        const junior = new Intern(response.name, response.id, response.email, response.github)  
-        writeIntern('./index_output/index.html', generateHTML.createIntern(junior))
+        const junior = new Intern(response.name, response.id, response.email, response.school)  
+        writeIntern(html, generateHTML.createIntern(junior))
         nextEmployee();
     })
 }
