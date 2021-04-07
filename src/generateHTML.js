@@ -21,7 +21,7 @@ const createHTML = () =>
         <row class="row">
             <div class="col-12 d-flex justify-content-center">
 `
-
+// template literal for the manager
 const createManager = (data) =>
 `
                 <div class = "card m-2 col-3">
@@ -32,13 +32,13 @@ const createManager = (data) =>
                     <p>
                         <ul class ="list.group list-group-flush">
                             <li class="list-group-item">ID: ${data.id}</li>
-                            <li class="list-group-item">Email: ${data.email}</li>
+                            <li class="list-group-item">Email: <a href = "mailto: ${data.email}"> ${data.email}</a></li>
                             <li class="list-group-item">Phone: ${data.phone}</li>
                         </ul>
                     <p>
                 </div>
 `
-
+// template literal for the engineers
 const createEngineer =(data) =>
 `
                 <div class = "card m-2 col-3">
@@ -49,13 +49,13 @@ const createEngineer =(data) =>
                     <p>
                         <ul class ="list.group list-group-flush">
                             <li class="list-group-item">ID: ${data.id}</li>
-                            <li class="list-group-item">Email: ${data.email}</li>
-                            <li class="list-group-item">GitHub: [${data.github}](https://www.github/${data.github})</li>
+                            <li class="list-group-item">Email: <a href = "mailto: ${data.email}"> ${data.email}</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://www.github.com/${data.github}">${data.github}</a></li>
                         </ul>
                     </p>
                 </div>
 `
-
+// template literal for the interns
 const createIntern =(data) => 
 `
                 <div class = "card m-2 col-3">
@@ -66,13 +66,13 @@ const createIntern =(data) =>
                     <p>
                         <ul class ="list.group list-group-flush">
                             <li class="list-group-item">ID: ${data.id}</li>
-                            <li class="list-group-item">Email: ${data.email}</li>
+                            <li class="list-group-item">Email: <a href = "mailto: ${data.email}"> ${data.email}</a></li>
                             <li class="list-group-item">School: ${data.school}</li>
                         </ul>
                     </p>
                 </div>
 `
-
+// template literal that closes the html
 const endHTML = () =>
 `    
             </div>

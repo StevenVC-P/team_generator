@@ -7,6 +7,7 @@ const Intern = require('./lib/intern.js');
 
 const html = './dist/index.html'
 
+//these functions write the index.htm
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log('Commit logged!')
@@ -37,6 +38,7 @@ function appendEnd(fileName, data) {
     );
 };
 
+//these are the list of questions generated in the prompt that will feed toward the variables used in writing the html
 const managerQuestions = [
     {
     type: 'input',
@@ -78,7 +80,7 @@ const engineerQuestions = [
     },
     {
     type: 'input',
-    message: "What is the engineer's github?",
+    message: "What is the engineer's github name?",
     name: 'github'
     },
 ]
@@ -106,6 +108,7 @@ const internQuestions = [
     },
 ]
 
+// askes the user to create a new employee or end the program
 const nextEmployee =() => {
     inquirer.prompt([
         {
@@ -125,7 +128,9 @@ const nextEmployee =() => {
         };
     })
 }
-  
+ 
+
+//functions that take the user inputs and move to writing the html and generating the next set of questions
 function managerResponse(){
     inquirer.prompt(managerQuestions)
         .then ((response) =>{
@@ -153,7 +158,8 @@ function internResponse(){
         nextEmployee();
     })
 }
-    
+
+//begins the program
 const init = () => {
     writeToFile(html, generateHTML.createHTML())
     managerResponse();
