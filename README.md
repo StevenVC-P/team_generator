@@ -38,7 +38,7 @@ Example of the complete html code:
 ![image](https://user-images.githubusercontent.com/77998885/113807413-b3bea080-9729-11eb-9745-af470dba3663.png)
 
 Example of the completed page:
-![image](https://user-images.githubusercontent.com/77998885/113351062-f0406580-92ff-11eb-9e93-e5cf49e4b421.png)
+![image](https://user-images.githubusercontent.com/77998885/113807752-55de8880-972a-11eb-8723-145269964394.png)
 
 ## Tests
 Current simply check that given user information is taken correctly.  Future tests will include that information is not blank and type is correct.
