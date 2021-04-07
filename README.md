@@ -12,6 +12,8 @@ This application allows the user to input information about their office team an
 * [Usage](#Usage)
 * [License](#License)
 * [Contributing](#Contributing)
+* [Walkthrough](#Walkthrough)
+* [Image](#Image)
 * [Tests](#Tests)
 * [Questions](#Questions)
 
@@ -27,6 +29,16 @@ Please review [https://opensource.org/licenses/MPL-2.0](https://opensource.org/l
 
 ## Contributing
 Josh was was extremely help in rethinking the original skeleton.
+
+## Walkthrough Demonstrating Usage
+[View Walkthrough](https://drive.google.com/file/d/1lcKcdTTtqwLta8TTFt1xMDv8PIhZVFr6/view)
+
+## Images
+Example of the complete html code:
+![image](https://user-images.githubusercontent.com/77998885/113807413-b3bea080-9729-11eb-9745-af470dba3663.png)
+
+Example of the completed page:
+![image](https://user-images.githubusercontent.com/77998885/113351062-f0406580-92ff-11eb-9e93-e5cf49e4b421.png)
 
 ## Tests
 Current simply check that given user information is taken correctly.  Future tests will include that information is not blank and type is correct.
